@@ -1,55 +1,62 @@
-Project Settings:
+<img width="1000" height="1000" alt="image" src="https://github.com/user-attachments/assets/35fc6e2e-1005-4fb7-82e4-abb1730d5e22" />
+Built and powered by using our very own "LetMeSleep" custom Engine
 
-IDE and Compiler:
+Game Concept: A time-based <Grab & Shoot> shooter game where the player uses mass-based projectiles to defeat enemies while trapped in an enclosed space.
+	      The mass-based projectiles needs to be vacuum/suck by the player using their "GravGrab" before they can shoot.
+	      So, what are the projectiles? They are the enemy entities.
+	      The heavier the entity is, the harder it is to be vacuumed/sucked and the range they can be shot out from will be shorter as well. 
+	      However, the heavier entities may have special damaging effects, making them high-risk, high-reward projectiles.
+Make strategic decisions, use the map to your advantage and survive the timer.
 
-	Developed using: Visual Studio 2022
-	Target Platform: 10.0.22621.0
+Game Genre: Shooter, 2.5D, Top-Down view
 
-Build Configuration:
+Engine Input:
+|---------------------------------------------------------------------------------------------------------------------------------------|
+While In Level Editor (Not playing)
+|---------------------------------------------------------------------------------------------------------------------------------------|
+W - Editor Camera Movement Up
+A - Editor Camera Movement Left
+S - Editor Camera Movement Down
+D - Editor Camera Movement Right
+Q - Camera Zoom out
+E - Camera Zoom in
+R - Camera rotate right
+T - Camera rotate left
+Z - Camera reset to player position
+Mouse Left Click - Select the game object and held down to drag the game object around in the Level Editor Window
+Mouse Scroll Button - Held down to drag the camera around
 
-	Debug:
-	     Optimization: Disabled
-	     Enable Intrinsic Function:	No
-	     Whole Program Optimization: No
+|---------------------------------------------------------------------------------------------------------------------------------------|
+While CutScene
+|---------------------------------------------------------------------------------------------------------------------------------------|
+LeftCtrl - Skips Cutscene
 
-	Release:
-	     Optimization: Maximum Optimization (Favor Speed) (/O2)
-	     Enable Intrinsic Function:	Yes (/Oi)
-	     Whole Program Optimization: Yes
+|---------------------------------------------------------------------------------------------------------------------------------------|
+While In Game (Playing)
+|---------------------------------------------------------------------------------------------------------------------------------------|
+W - Player Movement/Player Camera Up
+A - Player Movement/Player Camera Left
+S - Player Movement/Player Camera Down
+D - Player Movement/Player Camera Right
+L - Toggle FPS visibility
+Left Tab - Slides in/out Hunt List
+Mouse Left Click (Held down) - Begin Dragging enemy towards player
+Mouse Right Click - Shoots out the enemy if the player succeeded in capturing/holding one
+ESC - Pause/Unpause the game
 
-Architecture:
-	Target Architecture: x64
+|---------------------------------------------------------------------------------------------------------------------------------------|
+Cheat Codes (In Game)
+|---------------------------------------------------------------------------------------------------------------------------------------|
+F1 - Toggle god mode
+F2 - Set timer to 10 seconds
+F3 - Restart timer
+F4 - Reset player to origin
+F5 - Restore player to full hp
+F6 - Spawns Skeleton Enemy
+F7 - Spawns Explosive Enemy
+F8 - Spawn Slime Enemy
 
-Libraries Dependencies:
-
-Fmod	  Task: To create channels and sounds and use the creation to play/stop/resume/pause the audios.
-GLFW	  Task: OpenGL setup, Graphic Rendering, Keyboard/Mouse input
-ImGUI	  Task: Uses ImGui library for showing List of Game Objects, the Game Object details after selecting the game object, background RGB change, showing FPS, assets library 		etcs.
-Lua54	  Task: Serialization/De-Serialization of data from the .lua files.
-sol2	  Task: Wrapper for Lua54, comes together.
-glad	  Task: Extension of OpenGL for access to their functions
-freetype  Task:	For font rendering with multiple font format support where it reads and loads each character's data from TTF font files and renders character textures based on 		the provided text.
-KHR	  Task:	OpenGL debugging assistance
-DLG 	  Task:	Creating ImGui tools/debugging interfaces graphically
-stb	  Task: To load JPG/PNG images as textures, which are then used for rendering as textures for game objects.
-
-How to build:
-
-	Open the solution file: Grabity.sln
-	Choose your desired configuration: Debug / Release
-	Build the project by selecting Build > Build Solution, or by Ctrl+Shift+B
-	Executable will be available in "Executable/Debug/" or "Executable/Release/"
-
-Supported Platforms:
-
-	The project is currently tested and supported on Windows 10 and later.
-	The project must be built using NVidia Graphic PhysX processor
-
-Configuration File:
-
-	Configurations of the window/game setting is found at the same directory as the executable: config.lua
-	The config currently contains screen resolution, Fullscreen mode
-
-System Average Time:
-
-	A system average time log will be produced at the same directory as the executable when the program has ran
+|---------------------------------------------------------------------------------------------------------------------------------------|
+Anytime:
+|---------------------------------------------------------------------------------------------------------------------------------------|
+X - Camera shake
